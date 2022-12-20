@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'top/index'
+  root to: 'top#index'
+  
   devise_for :admin, skip: [:registrations, :passwords], controllers: {
     sessions: "admin/sessions"
   }
