@@ -36,6 +36,8 @@
         <%= link_to "ログイン", new_user_session_path %>
       </li>
     <% end %>
+    <p>admin:<span class="text-danger"><%= current_admin.name if admin_signed_in? %></span></p>
+    <p>user:<span class="text-info"><%= current_user.name if user_signed_in? %></span></p>
   </header>
   
   <body>
